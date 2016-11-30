@@ -5,6 +5,20 @@
 <link rel="stylesheet" type="text/css" href="css/normalize.css">
 <link rel="stylesheet" type="text/css" href="css/main.css">
 
+<script src="https://maps.googleapis.com/maps/api/js"></script>
+    <script>
+      function initialize() {
+        var mapCanvas = document.getElementById('map');
+        var mapOptions = {
+          center: new google.maps.LatLng(45.5231, -122.6765),
+          zoom: 8,
+          mapTypeId: google.maps.MapTypeId.ROADMAP
+        }
+        var map = new google.maps.Map(mapCanvas, mapOptions)
+      }
+      google.maps.event.addDomListener(window, 'load', initialize);
+    </script>
+
 <title>Twin Finch Roastery</title>
 </head>
 
@@ -14,181 +28,235 @@
 	<div> <!--top bar-->
     	<div class="wrapper row">
             <div class="col-1-6">
-                <!--<a href="#">
+                <a href="#">
                     <img src="img/logo.png" alt="">
-                </a>-->
-                <div class="blue">
-                </div>
+                </a>
             </div>
-            <nav class="col-5-12">
-                <div class="blue"> <!--ul-->
-                </div>
+            <nav class="col-7-12 float-left" id="smooth-scroll">
+                <ul>
+                	<li><a href="#intro">About</a></li>
+                    <li><a href="#items">Products</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
             </nav>
         </div>
     </div>
-    <div> <!--hero-->
+    <section> <!--hero-->
     	<div class="row wrapper">
-            <div class="col-1-2 block-center"> <!--hero content need to be in wrapper? already centered-->
-            	<div class="blue">
-                </div>
-            </div>
+            <header class="col-1-2 block-center"> <!--hero content need to be in wrapper? already centered-->
+            	<h1>Twin Finch Roastery</h1>
+                <p>The most quality coffee in the world from Portland, OR.</p>
+                <a href="#items">Check Out Our Selection</a>
+            </header>
         </div>
-    </div>
+    </section>
 </header>
-<section> <!--introductory-->
+<section id="intro"> <!--introductory-->
 	<div class="wrapper">
     	<div class="row">
         	<div class="col-5-12">
-        		<!--<img src="img/intro.jpg" alt="">-->
-                <div class="blue">
-                </div>
+        		<figure>
+                	<img src="img/intro.jpg" alt="">
+                </figure>
             </div>
             <div class="col-1-2">
-            	<div class="blue">
-                </div>
+            	<p>Twin Finch Roastery is an authentic micro-roastery; small, dedicated, and highly focused on quality. We have a constantly evolving, hand picked selection of fine coffee origins and delicious blends engineered to help you brew a cafe-quality cup at home.</p>
             </div>
         </div>
         <blockquote class="col-2-3 block-center"> <!--blockquote-->
-        	<div class="blue">
-            </div>
+        	<p>“This extraordinary coffee almost defies description with its aromatic complexity while retaining a classic clarity of structure.”</p>
+            <p>- Coffee Review</p>
         </blockquote>
     </div>
 </section>
-<section> <!--items-->
+<section id="items"> <!--items-->
 	<div class="wrapper">
     	 <!--listed items-->
             <section> <!--first item, second item etc.-->
+            	<h2>Check out our signature blends</h2>
                 <div class="row"> <!--card - each item should be a subsection-->
-                    <div class="col-7-12 blue">
-                    </div>
-                    <div class="col-1-6 blue">
+                    <header class="col-7-12">
+                    	<h3>The world famous <span>Finch House Blend</span></h3>
+                        <p>Medium</p>
+                    </header>
+                    <div class="col-1-3">
+                    	<h4>98 <span>Rated by coffeereview.com</span></h4>
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-1-2 blue">
-                    
+                	<div class="col-1-2">
+                        <p>Hint of citrus, complemented by flavors of dark chocolate, peanut and light pepper notes.</p>
+                        <p>La Chiapas, Mexico</p>
                     </div>
-                    <div class="col-1-6 blue">
+                    <div class="col-1-6">
+                    	<a href="#">Buy Now</a>
+                        <p>1lb $17.95</p>
                     </div>
                 </div>
             </section>
             <section>
                 <div class="row"> <!--card-->
-                    <div class="col-7-12 blue">
-                    </div>
-                    <div class="col-1-6 blue">
-                    </div>
+                    <header class="col-7-12">
+                    	<h3>Try our seasonal delight: <span>Evening Oak</span></h3>
+                        <p>Medium Dark</p>
+                    </header>
                 </div>
                 <div class="row">
-                    <div class="col-1-2 blue">
-                    
+                    <div class="col-1-2">
+                    	<p>Our featured roast of the season. Pungently rich and complex with hints of night-blooming flowers and coriander in aroma and cup.</p>
+                        <p>Eastern Java, Indonesia</p>
                     </div>
-                    <div class="col-1-6 blue">
+                    <div class="col-1-6">
+                    	<a href="#">Buy Now</a>
+                        <p>1lb $19.95</p>
                     </div>
                 </div>
             </section>
             <div class="row"> <!--3 lesser items-->
                 <section class="col-1-3">
-                    <div class="blue"> <!-- image -->
-                    </div>
-                    <div class="blue">
-                    </div>
+                    <header>
+                    	<h3>Sunrise</h3>
+                        <p>Light</p>
+                    </header>
+                    <p>Light, fruity acidity which complements its fully nutty body and unique spicy tones.</p>
+                    <p>La Chiapas, Mexico</p>
+                    <a href="#">Buy Now</a>
+                    <p>1lb $17.95</p>
                 </section>
                 <section class="col-1-3">
-                    <div class="blue"> <!-- image -->
-                    </div>
-                    <div class="blue">
-                    </div>
+                    <header>
+                    	<h3>Midnight</h3>
+                        <p>Dark</p>
+                    </header>
+                    <p>Roasted into second crack for a big, bold and dark cup. Beans display oil.</p>
+                    <p>Latin America</p>
+                    <a href="#">Buy Now</a>
+                    <p>1lb $17.95</p>
                 </section>
                 <section class="col-1-3">
-                    <div class="blue"> <!-- image -->
-                    </div>
-                    <div class="blue">
-                    </div>
+                    <header>
+                    	<h3>Expresso</h3>
+                        
+                    </header>
+                    <p>Clean, a little roasty, sumptuous crema, unfussy, delicious.</p>
+                    <p>Latin America, Africa, Indonesia</p>
+                    <a href="#">Buy Now</a>
+                    <p>1lb $19.95</p>
                 </section>
             </div>
             <!--the coffee bean roast process / how to brew-->
         	<div class="row">
                 <div class="col-1-2">
-                    <div class="blue">
-                    </div>
+                    <p>Our coffee is roasted in a hot air, refractory lined roaster with an extraordinary level of control.</p>
+                    <p>The significance of relying on a high volume of hot air to roast coffee beans can't be understated. Most small coffee roasters use a single stage burner which offers virtually no control during the roasting process. The refractory significantly reduces hot spots which can damage coffee beans and produces a much more even roasting environment.</p>
+                    <a href="" target="_blank">Learn how to brew your own batch here!</a>
                 </div>
                 <div class="col-5-12">
-                    <div class="blue">
-                    </div>
+                	<figure>
+                    	<img src="img/method.jpg" alt="">
+                    </figure>
                 </div>
             </div>
     </div>
 </section>
-<section> <!-- map/location -->
+<section id="location"> <!-- map/location -->
 	<div class="wrapper">
         <div class="row">
-        	<div class="col-1-2"> <!-- the map -->
-            	<div class="blue">
+        	<h2 class="col-5-12 float-right">Find us in Portland</h2>
+        	<div class="col-1-2 float-left"> <!-- the map -->
+            	<div id="map">
                 </div>
             </div>
             <div class="col-5-12">
-            	<div class="blue">
-                </div>
+            	<p>The significance of relying on a high volume of hot air to roast coffee beans can't be understated. Most small coffee roasters use a single stage burner which offers virtually no control during the roasting process. The refractory significantly reduces hot spots which can damage coffee beans and produces a much more even roasting environment.</p>
             </div>
         </div>
         <div class="col-5-6 block-center">
-            <div class="blue">
-            </div> <!--you can buy them from us directly... <p>-->
+            <p>You can buy from us directly at our Portland storefront located at 457 NW Market Street.</p>
         </div>
     </div>
 </section>
-<div class="wrapper row"> <!--newsletter sliver, not a section?-->
+<form class="wrapper row"> <!--newsletter sliver, not a section?-->
 	<div class="col-5-12">
-    	<div class="blue">
-        </div>
+    	<p>Subscribe to our e-Newsletter:</p>
     </div>
     <div class="col-5-12">
-    	<div class="blue">
-        </div>
+    	<input type="email" name="newsletter">
     </div>
     <div class="col-1-6">
-    	<div class="blue">
-        </div>
+    	<a href="#">Subscribe</a>
     </div>
-</div>
-<section> <!--contact us-->
+</form>
+<section id="contact"> <!--contact us-->
 	<div class="wrapper">
         <header>
-            <h2 class="blue"><!--Contact Us--></h2>
+            <h2 class="blue">Contact us</h2>
         </header>
-        <div class="row">
+        <form class="row">
         	<div class="col-1-3">
-            	<!--<img src="img/contact.jpg" alt="">-->
-                <div class="blue">
-        		</div>
+            	<img src="img/contact.jpg" alt="">
             </div>
             <div class="col-1-3">
-            	<div class="blue">
-        		</div>
+            	<input type="text" name="firstname" placeholder="first name">
+                <input type="text" name="lastname" placeholder="last name">
+                <input type="email" name="e-mail" placeholder="e-mail address">
             </div>
             <div class="col-1-3">
-            	<div class="blue">
-        		</div>
+            	<textarea name="comment" placeholder="comment..."></textarea>
+                <a href="#">Submit Now</a>
             </div>
-        </div>
+        </form>
     </div>
 </section>
 <footer>
 	<div class="wrapper row">
     	<div class="col-1-6">
-        	<div class="blue">
-        	</div>
+        	<a href="#">
+        		<img src="img/logo.png" alt="">
+            </a>
         </div>
         <div class="col-5-12">
-        	<div class="blue">
-        	</div>
+        	<ul>
+                	<li><a href="#intro">About</a></li>
+                    <li><a href="#items">Products</a></li>
+                    <li><a href="#contact">Contact</a></li>
+            </ul>
         </div>
         <div class="col-1-4">
-        	<div class="blue">
-        	</div>
+        	<a href="http://facebook.com" target="_blank"></a>
+            <a href="http://twitter.com" target="_blank"></a>
+            <a href="https://plus.google.com/" target="_blank"></a>
         </div>
     </div>
 </footer>
+
+<!--smooth scroll-->
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script> 
+<script>
+jQuery(document).ready(function($){
+	
+	// Smooth scroll home nav
+		$('#smooth-scroll').on('click', 'a', function(e) {
+			// prevent default anchor click behavior
+   			e.preventDefault();
+		
+		   // store hash
+		   var hash = this.hash;
+			
+			$('html, body').animate({
+			   scrollTop: $(this.hash).offset().top-0
+			 }, 500, function(){
+		
+			   // when done, add hash to url
+			   // (default click behaviour)
+			   window.location.hash = hash;
+			 });
+		
+		});
+	
+});
+</script>
+
 </body>
 </html>
