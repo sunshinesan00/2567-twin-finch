@@ -31,7 +31,7 @@ blockquote p, h1, h2, h3 {
 	font-family: 'Cormorant Garamond', serif;
 }
 
-blockquote footer {
+blockquote footer p{
 	font-family: 'Open Sans', sans-serif;
 }
 /*
@@ -68,23 +68,23 @@ h1, h2, h3 {
 
 h1 {
 	
-	font-size: 5rem;
+	font-size: 4.8rem;
 	/*padding-top: 165px;*/
 	padding-top: 0px;
 	margin: 0;
 }
 
 h2 {
-	font-size: 2.5rem;
+	font-size: 3.2rem;
 }
 
 h3 {
-	font-size: 1.7rem;
+	font-size: 2.7rem;
 }
 
 /*--1.2 - Body Copy ------------------------------------------- */
 
-blockquote {
+#items section header p {
 	font-size: 1.7rem; /*same size as h3, grouping?*/
 }
 
@@ -94,6 +94,38 @@ p {
 	font-family: 'Open Sans', sans-serif;
 	font-weight: 400;
 	font-size: 1.25rem;
+	
+	line-height: 1.875rem;
+}
+
+/*blockquote*/
+
+/*margins are defined in column area*/
+
+blockquote p {
+	font-size: 2.4rem;
+	font-weight: 500;
+	line-height: 3.15rem;
+}
+
+blockquote footer p{
+	font-size: 1.7rem; /*grouping?*/
+	text-align: right;
+}
+
+/*text for items*/
+
+#items section header p, #items section .row:nth-child(2) p:nth-of-type(2) { /*category, location*/
+	font-style: italic;
+	
+}
+
+/*pull out*/
+
+#items > .wrapper > div .col-1-2 p:first-child {
+	font-weight: 700;
+	font-size: 1.6rem;
+	line-height: 2.1rem;
 }
 
 /*--1.3 - Buttons ------------------------------------------- */
@@ -204,7 +236,7 @@ body > header > div:first-child {
 
 .col-1-2.block-center, .col-2-3.block-center, .col-5-6.block-center {
 	float: none;
-	margin: 0 auto 8px;
+	margin: 15px auto 7px;
 }
 
 .col-1-2 {
@@ -341,6 +373,12 @@ img {
 	max-width: 100%;
 }
 
+/*root section*/
+
+body > section {
+	padding: 30px 0;
+}
+
 /*nav*/
 
 nav.col-7-12.float-left { /*this is an exception, the nav is touching the logo in the nav bar. default is right because its the last element.*/
@@ -396,7 +434,10 @@ body > header > section:first-of-type {
 	color: white;
 }
 
-
+#items, #contact {
+	background-color: #434343;
+	color: white;
+}
 
 
 
