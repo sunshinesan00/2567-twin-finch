@@ -80,6 +80,7 @@ h2 {
 
 h3 {
 	font-size: 2.7rem;
+	margin: 5px;
 }
 
 /*--1.2 - Body Copy ------------------------------------------- */
@@ -123,7 +124,7 @@ blockquote footer p{
 /*pull out*/
 
 #items > .wrapper > div .col-1-2 p:first-child {
-	font-weight: 700;
+	font-weight: 400;
 	font-size: 1.6rem;
 	line-height: 2.1rem;
 }
@@ -141,8 +142,15 @@ footer .col-1-4 a { /*the blue is placeholder until sprites are made*/
 
 /*buttons general*/
 a {
-	color: black;
 	text-decoration: none;
+}
+
+header a {
+	color: black;
+}
+
+footer a {
+	color: white;
 }
 
 .button {
@@ -160,9 +168,32 @@ a {
 }
 
 /*button hero*/
-body > header > section:first-of-type .button {
+body > header div:nth-of-type(2) .button {
 	margin: 10px 0 10px;
 	background-color: rgba(0, 0, 0, 0.5);
+}
+
+/*items button*/
+#items .button:hover, body > header div:nth-of-type(2) .button:hover, #contact .button:hover {
+	border-color: black;
+	background-color: white;
+	color: black;
+}
+
+/*contact button*/
+#contact .button {
+	background-color: #272727;
+	border-color: black;
+}
+
+/*brew article*/
+#items > .wrapper > div .col-1-2 a {
+	font-size: 1.4rem;
+	color: #DAC68C; /*gold color*/
+}
+
+#items > .wrapper > div .col-1-2 a:hover {
+	text-decoration: underline;
 }
 
 /*--1.4 - Forms ------------------------------------------- */
@@ -186,16 +217,28 @@ li {
 	font-size: 1.5rem;
 }
 
-nav li {
+nav li, body > footer .col-5-12 li {
 	border-style: solid;
 	border-width: 1.5px;
-	border-color: white;
-	padding: 5px 10px;
+	
+	padding: 10px 20px;
 	margin: 0 20px;
+}
+
+nav li {
+	border-color: white;
+}
+
+footer .col-5-12 li {
+	border-color: #272727;
 }
 
 nav li:hover {
 	border-color: black;
+}
+
+footer .col-5-12 li:hover {
+	border-color: white;
 }
 
 /*--------------------------------------------------------------
@@ -209,7 +252,11 @@ body > header > div:first-child {
 	z-index: 3;
 	
 	margin: 0;
-	padding: 10px 0;
+	padding: 5px 0;
+}
+
+nav {
+	padding: 30px 0;
 }
 
 /*--------------------------------------------------------------
@@ -402,25 +449,54 @@ nav.col-7-12.float-left { /*this is an exception, the nav is touching the logo i
 	height: 250px;
 }
 
-/*--3.1 - Site Header ------------------------------------------- */
+/*--3.3 - Site Header ------------------------------------------- */
 
 /*hero*/
 
-body > header > section:first-of-type {
-	background-color: gray; /*this is temporary, gray to emulate image*/
-	text-align: center;
+header .tint {
+	padding: 180px 0 30px;
 }
 
-body > header > section:first-of-type p{
+body > header div:nth-of-type(2) {
+	background: url(../img/bg-hero.jpg) 0 0 fixed no-repeat;
+	background-size: cover; /*vendor?*/
+	text-align: center;
+	margin: 0;
+}
+
+body > header div:nth-of-type(2) p{
 	font-weight: 700;
 	font-size: 1.5rem;
 }
 
-/*--3.3	- Site Header -------------------------------------------- */
+/*--3.4 - Site Footer ------------------------------------------- */
 
-body > header > section:first-of-type {
-	margin: 0;
-	padding: 165px 0 20px;
+body > footer {
+	padding: 15px 0;
+}
+
+/*--------------------------------------------------------------
+4.0 - Media
+-------------------------------------------------------------- */
+
+.logo {
+	max-width: 55%;
+}
+
+/*product images*/
+
+#items .wrapper > section:first-of-type > div:first-of-type {
+	background: url(../img/product-houseblend.jpg) 0 0 fixed no-repeat;
+	background-size: cover; /*vendor? grouping?*/
+}
+
+#items .wrapper .tint {
+	padding: 20px 20px 125px;
+}
+
+#items .wrapper > section:nth-of-type(2) > div:first-of-type {
+	background: url(../img/product-seasonal.jpg) 0 0 fixed no-repeat;
+	background-size: cover; /*vendor? grouping?*/
 }
 
 /*--------------------------------------------------------------
@@ -429,16 +505,23 @@ body > header > section:first-of-type {
 
 /*--5.2 - Colors ------------------------------------------- */
 
+.tint {
+	background-color: rgba(50, 50, 50, 0.6);
+}
+
 /*hero*/
-body > header > section:first-of-type {
+body > header div:nth-of-type(2) {
 	color: white;
 }
 
 #items, #contact {
-	background-color: #434343;
+	background-color: #434343; /*dark*/
 	color: white;
 }
 
+body > footer {
+	background-color: #272727; /*darkest*/
+}
 
 
 /*-----------------------------------------------------------------*/
