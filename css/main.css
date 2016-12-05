@@ -196,6 +196,10 @@ body > header div:nth-of-type(2) .button {
 	text-decoration: underline;
 }
 
+#items .button {
+	/*width: 100%;*/
+}
+
 /*--1.4 - Forms ------------------------------------------- */
 label {
 	display: none;
@@ -408,6 +412,7 @@ nav {
 .wrapper {
 	margin: 0 auto 5px;
 	width: 65%;
+	max-width: 1170px;
 }
 
 .row:after {
@@ -449,6 +454,13 @@ nav.col-7-12.float-left { /*this is an exception, the nav is touching the logo i
 	height: 250px;
 }
 
+/*lesser items*/
+/*
+#items .wrapper .col-1-3 header p {
+	margin-bottom: 150px;
+	display: inline-block;
+}*/
+
 /*--3.3 - Site Header ------------------------------------------- */
 
 /*hero*/
@@ -467,6 +479,10 @@ body > header div:nth-of-type(2) {
 body > header div:nth-of-type(2) p{
 	font-weight: 700;
 	font-size: 1.5rem;
+}
+
+#items .wrapper > section > div:first-of-type {
+	margin: 20px 0;
 }
 
 /*--3.4 - Site Footer ------------------------------------------- */
@@ -488,6 +504,7 @@ body > footer {
 #items .wrapper > section:first-of-type > div:first-of-type {
 	background: url(../img/product-houseblend.jpg) 0 0 fixed no-repeat;
 	background-size: cover; /*vendor? grouping?*/
+	
 }
 
 #items .wrapper .tint {
@@ -499,6 +516,19 @@ body > footer {
 	background-size: cover; /*vendor? grouping?*/
 }
 
+#items .wrapper .col-1-3:first-of-type header {
+	background: url(../img/product-sunrise.jpg) 0 0 no-repeat;
+	background-size: 189px 250px; /*vendor? grouping?*/
+	
+	height: 250px;
+}
+
+#items .wrapper .col-1-3 header {
+	background: url(../img/product-generic.jpg) 0 0 no-repeat;
+	background-size: 189px 250px; /*vendor? grouping?*/
+	
+	height: 250px;
+}
 /*--------------------------------------------------------------
 5.0 - Utility
 -------------------------------------------------------------- */
