@@ -523,8 +523,15 @@ body > footer {
 	height: 250px;
 }
 
-#items .wrapper .col-1-3 header {
-	background: url(../img/product-generic.jpg) 0 0 no-repeat;
+#items .wrapper .col-1-3:nth-of-type(2) header {
+	background: url(../img/product-midnight.jpg) 0 0 no-repeat;
+	background-size: 189px 250px; /*vendor? grouping?*/
+	
+	height: 250px;
+}
+
+#items .wrapper .col-1-3:nth-of-type(3) header {
+	background: url(../img/product-expresso.jpg) 0 0 no-repeat;
 	background-size: 189px 250px; /*vendor? grouping?*/
 	
 	height: 250px;
