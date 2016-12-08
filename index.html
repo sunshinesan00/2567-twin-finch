@@ -13,7 +13,8 @@
         var mapOptions = {
           center: new google.maps.LatLng(45.5231, -122.6765),
           zoom: 13,
-          mapTypeId: google.maps.MapTypeId.ROADMAP
+          mapTypeId: google.maps.MapTypeId.ROADMAP,
+		  scrollwheel: false
         }
         var map = new google.maps.Map(mapCanvas, mapOptions)
       }
@@ -44,15 +45,11 @@
     </div>
     
     <div> <!--hero-->
-    	<div class="tint">
-            
                 <div class="col-1-2 block-center">
                     <h1>Twin Finch Roastery</h1>
                     <p>The most quality coffee in the world from Portland, OR.</p>
                     <a href="#items" class="button">Check Out Our Selection</a>
                 </div>
-            
-        </div>
     </div>
     
 </header>
@@ -81,8 +78,8 @@
          	<h2>Check out our signature blends</h2>
             <section> <!--first item, second item etc.-->
             	
-                <div> <!--card - each item should be a subsection-->
-                	<div class="tint row">
+                <div class="row"> <!--card - each item should be a subsection-->
+                	
                         <header class="col-7-12">
                             <h3>The world famous <span>Finch House Blend</span></h3>
                             <p>Medium</p>
@@ -90,7 +87,7 @@
                         <div class="col-1-3">
                             <h4>98 <span>Rated by coffeereview.com</span></h4>
                         </div>
-                    </div>
+                    
                 </div>
                 <div class="row">
                 	<div class="col-1-2">
@@ -104,13 +101,13 @@
                 </div>
             </section>
             <section>
-            	<div>
-                    <div class="tint row"> <!--card-->
+            	<div class="row">
+                    <!--card-->
                         <header class="col-7-12">
                             <h3>Try our seasonal delight: <span>Evening Oak</span></h3>
                             <p>Medium Dark</p>
                         </header>
-                    </div>
+                   
                 </div>
                 <div class="row">
                     <div class="col-1-2">
@@ -188,10 +185,8 @@
     </div>
 </section>
 <form class="wrapper row"> <!--newsletter sliver-->
-	<div class="col-5-12">
+	<div class="col-5-6">
     	<p>Subscribe to our e-Newsletter:</p>
-    </div>
-    <div class="col-5-12">
     	
         <label for="newsletter">E-Mail</label>
     	<input type="email" name="newsletter" id="newsletter">

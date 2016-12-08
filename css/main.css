@@ -89,6 +89,8 @@ h3 {
 	font-size: 1.7rem; /*same size as h3, grouping?*/
 }
 
+
+
 p {
 	margin: 5px 0;
 	
@@ -116,10 +118,12 @@ blockquote footer p{
 
 /*text for items*/
 
-#items section header p, #items section .row:nth-child(2) p:nth-of-type(2) { /*category, location*/
+#items section header p, #items section .row:nth-child(2) p:nth-of-type(2), #items .col-1-3 p:nth-of-type(2) { /*category, location*/
 	font-style: italic;
 	
 }
+
+
 
 /*pull out*/
 
@@ -133,11 +137,31 @@ blockquote footer p{
 
 /*sprites*/
 
-footer .col-1-4 a { /*the blue is placeholder until sprites are made*/
+footer .col-1-4 a { 
 	display: inline-block;
 	width: 25px;
 	height: 25px;
-	background-color: blue;
+	background-position: 0 0;
+}
+
+footer .col-1-4 li:first-child a {
+	background: url(../img/facebook.png) no-repeat;
+}
+
+footer .col-1-4 li:nth-child(2) a {
+	background: url(../img/twitter.png) no-repeat;
+}
+
+footer .col-1-4 li:nth-child(3) a {
+	background: url(../img/googleplus.png) no-repeat;
+}
+
+footer .col-1-4 li:nth-child(4) a {
+	background: url(../img/youtube.png) no-repeat;
+}
+
+footer .col-1-4 li a:hover {
+	background-position: 0 -25px;
 }
 
 /*buttons general*/
@@ -196,8 +220,8 @@ body > header div:nth-of-type(2) .button {
 	text-decoration: underline;
 }
 
-#items .button {
-	/*width: 100%;*/
+#items .col-1-3 .button {
+	margin-top: 20px;
 }
 
 /*--1.4 - Forms ------------------------------------------- */
@@ -207,6 +231,19 @@ label {
 
 input {
 	display: block;
+}
+
+/*subscribe*/
+body > form {
+	background-color: #272727;
+}
+
+body > form input, body > form p {
+	display: inline-block;
+}
+
+body > form input {
+	width: 400px;
 }
 
 /*--1.5 - Lists ------------------------------------------- */
@@ -221,10 +258,17 @@ li {
 	font-size: 1.5rem;
 }
 
+footer .col-1-4 ul {
+	padding: 27px 0;
+}
+
+footer .col-1-4 li {
+	margin: 0 10px;
+}
+
 nav li, body > footer .col-5-12 li {
 	border-style: solid;
 	border-width: 1.5px;
-	
 	padding: 10px 20px;
 	margin: 0 20px;
 }
@@ -260,7 +304,7 @@ body > header > div:first-child {
 }
 
 nav {
-	padding: 30px 0;
+	padding: 15px 0;
 }
 
 /*--------------------------------------------------------------
@@ -437,6 +481,12 @@ nav.col-7-12.float-left { /*this is an exception, the nav is touching the logo i
 	float: left;
 }
 
+/*how to brew*/
+
+#items .wrapper .row:nth-of-type(2) {
+	margin-top: 55px;
+}
+
 /*location*/
 
 #location .col-5-12.float-right {
@@ -465,7 +515,7 @@ nav.col-7-12.float-left { /*this is an exception, the nav is touching the logo i
 
 /*hero*/
 
-header .tint {
+header > div {
 	padding: 180px 0 30px;
 }
 
@@ -497,6 +547,7 @@ body > footer {
 
 .logo {
 	max-width: 55%;
+	padding-top: 10px;
 }
 
 /*product images*/
@@ -507,7 +558,7 @@ body > footer {
 	
 }
 
-#items .wrapper .tint {
+#items .wrapper > section > .row:first-child {
 	padding: 20px 20px 125px;
 }
 
@@ -542,9 +593,9 @@ body > footer {
 
 /*--5.2 - Colors ------------------------------------------- */
 
-.tint {
+/*.tint {
 	background-color: rgba(50, 50, 50, 0.6);
-}
+}*/
 
 /*hero*/
 body > header div:nth-of-type(2) {
