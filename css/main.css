@@ -31,7 +31,7 @@ blockquote p, h1, h2, h3 {
 	font-family: 'Cormorant Garamond', serif;
 }
 
-blockquote footer p{
+blockquote footer p, .button {
 	font-family: 'Open Sans', sans-serif;
 }
 /*
@@ -60,44 +60,47 @@ input, textarea, body > header > div:first-child {
 /*--------------------------------------------------------------
 1.0 - Typography
 -------------------------------------------------------------- */
-/*--1.1 - Headings ------------------------------------------- */
 
-h1, h2, h3 {
+/*bold text grouping*/
+h1, h2, h3, #items .wrapper > section:first-of-type .col-1-3 span, .button, label, body > header div:nth-of-type(2) p, #items > .wrapper > div .col-1-2 p:first-child {
 	font-weight: 700;
 }
+
+/*--1.1 - Headings ------------------------------------------- */
 
 h1 {
 	
 	font-size: 4.8rem;
-	/*padding-top: 165px;*/
 	padding-top: 0px;
 	margin: 0;
 }
 
 h2 {
 	font-size: 3.2rem;
+	margin: 5px 0 15px;
 }
 
 h3 {
 	font-size: 2.7rem;
-	margin: 5px;
+	margin: 5px 0;
 }
 
 /*--1.2 - Body Copy ------------------------------------------- */
+/*right align*/
 
-#items section header p {
-	font-size: 1.7rem; /*same size as h3, grouping?*/
+#contact .col-1-3:last-child, blockquote footer p {
+	text-align: right;
 }
 
-
+/*common sizes*/
+#items section header p, blockquote footer p {
+	font-size: 1.7rem;
+}
 
 p {
 	margin: 5px 0;
-	
-	font-family: 'Open Sans', sans-serif;
 	font-weight: 400;
 	font-size: 1.25rem;
-	
 	line-height: 1.875rem;
 }
 
@@ -111,11 +114,6 @@ blockquote p {
 	line-height: 3.15rem;
 }
 
-blockquote footer p{
-	font-size: 1.7rem; /*grouping?*/
-	text-align: right;
-}
-
 /*text for items*/
 
 #items section header p, #items section .row:nth-child(2) p:nth-of-type(2), #items .col-1-3 p:nth-of-type(2) { /*category, location*/
@@ -123,12 +121,20 @@ blockquote footer p{
 	
 }
 
+/*twinfinch score*/
 
+#items .wrapper > section:first-of-type .col-1-3 span {
+	font-size: 10rem;
+}
+
+#items .wrapper > section:first-of-type .col-1-3 p {
+	text-align: center;
+	margin: 50px 0 100px;
+}
 
 /*pull out*/
 
 #items > .wrapper > div .col-1-2 p:first-child {
-	font-weight: 400;
 	font-size: 1.6rem;
 	line-height: 2.1rem;
 }
@@ -169,10 +175,6 @@ a {
 	text-decoration: none;
 }
 
-header a {
-	color: black;
-}
-
 footer a {
 	color: white;
 }
@@ -180,13 +182,10 @@ footer a {
 .button {
 	display: inline-block;
 	border-style: solid;
-	border-width: 4px;
+	border-width: 3.5px;
 	border-color: white;
 	padding: 5px 20px;
-	
-	font-family: 'Open Sans', sans-serif;
 	font-size: 1.5rem;
-	font-weight: 700;
 	color: white;
 	
 }
@@ -198,10 +197,9 @@ body > header div:nth-of-type(2) .button {
 }
 
 /*items button*/
-#items .button:hover, body > header div:nth-of-type(2) .button:hover, #contact .button:hover {
+#items .button:hover, body > header div:nth-of-type(2) .button:hover, #contact .button:hover, body > form > .button:hover {
 	border-color: black;
 	background-color: white;
-	color: black;
 }
 
 /*contact button*/
@@ -234,16 +232,69 @@ input {
 }
 
 /*subscribe*/
-body > form {
+body > form.wrapper {
 	background-color: #272727;
+	padding: 10px 20px;
+	margin: 30px auto;
 }
 
-body > form input, body > form p {
+body > form label, body > form input, body > form p {
 	display: inline-block;
 }
 
+label {
+	color: white;
+	font-size: 1.8rem;
+}
+
 body > form input {
-	width: 400px;
+	width: 40%;
+	color: white;
+}
+
+input, textarea {
+	border-width: 2px;
+	border-style: solid;
+	margin: 8px 0;
+	padding: 10px 5px;
+	border-color: white;
+	background-color: #474747;
+}
+
+textarea {
+	height: 127px;
+	resize: none;
+}
+
+form img {
+	max-width: 75%;
+}
+
+body > form input {
+	
+	background-color: #272727;
+	margin: 0 10px;
+}
+
+::-webkit-input-placeholder {
+   font-style: italic;
+   color: #fff;
+}
+:-moz-placeholder {
+   font-style: italic;
+   color: #fff;  
+}
+::-moz-placeholder {
+   font-style: italic; 
+   color: #fff; 
+}
+:-ms-input-placeholder {  
+   font-style: italic; 
+   color: #fff;
+}
+:-o-input-placeholder {  
+   font-style: italic; 
+   color: #fff;
 }
 
 /*--1.5 - Lists ------------------------------------------- */
@@ -270,7 +321,7 @@ nav li, body > footer .col-5-12 li {
 	border-style: solid;
 	border-width: 1.5px;
 	padding: 10px 20px;
-	margin: 0 20px;
+	margin: 0 10px;
 }
 
 nav li {
@@ -449,10 +500,6 @@ nav {
 
 /*--3.2 - Site Structure------------------------------------------- */
 
-/*body {
-	
-}*/
-
 .wrapper {
 	margin: 0 auto 5px;
 	width: 65%;
@@ -481,9 +528,19 @@ nav.col-7-12.float-left { /*this is an exception, the nav is touching the logo i
 	float: left;
 }
 
+/*main card spacing*/
+
+#items .wrapper > section > .row:first-child {
+	padding: 20px 20px 125px;
+}
+
+#items .wrapper > section:first-of-type > .row:first-child {
+	padding: 0 0 0 20px;
+}
+
 /*how to brew*/
 
-#items .wrapper .row:nth-of-type(2) {
+#items .wrapper > .row:last-child {
 	margin-top: 55px;
 }
 
@@ -521,13 +578,16 @@ header > div {
 
 body > header div:nth-of-type(2) {
 	background: url(../img/bg-hero.jpg) 0 0 fixed no-repeat;
-	background-size: cover; /*vendor?*/
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-ms-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
 	text-align: center;
 	margin: 0;
 }
 
-body > header div:nth-of-type(2) p{
-	font-weight: 700;
+body > header div:nth-of-type(2) p {
 	font-size: 1.5rem;
 }
 
@@ -545,6 +605,16 @@ body > footer {
 4.0 - Media
 -------------------------------------------------------------- */
 
+/*background size*/
+/*
+body > header div:nth-of-type(2), #items .wrapper > section:first-of-type > div:first-of-type, #items .wrapper > section:nth-of-type(2) > div:first-of-type {
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-ms-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}*/
+
 .logo {
 	max-width: 55%;
 	padding-top: 10px;
@@ -554,37 +624,38 @@ body > footer {
 
 #items .wrapper > section:first-of-type > div:first-of-type {
 	background: url(../img/product-houseblend.jpg) 0 0 fixed no-repeat;
-	background-size: cover; /*vendor? grouping?*/
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-ms-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
 	
-}
-
-#items .wrapper > section > .row:first-child {
-	padding: 20px 20px 125px;
 }
 
 #items .wrapper > section:nth-of-type(2) > div:first-of-type {
 	background: url(../img/product-seasonal.jpg) 0 0 fixed no-repeat;
-	background-size: cover; /*vendor? grouping?*/
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-ms-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
 }
 
 #items .wrapper .col-1-3:first-of-type header {
 	background: url(../img/product-sunrise.jpg) 0 0 no-repeat;
-	background-size: 189px 250px; /*vendor? grouping?*/
 	
-	height: 250px;
 }
 
 #items .wrapper .col-1-3:nth-of-type(2) header {
 	background: url(../img/product-midnight.jpg) 0 0 no-repeat;
-	background-size: 189px 250px; /*vendor? grouping?*/
-	
-	height: 250px;
 }
 
 #items .wrapper .col-1-3:nth-of-type(3) header {
 	background: url(../img/product-expresso.jpg) 0 0 no-repeat;
-	background-size: 189px 250px; /*vendor? grouping?*/
-	
+}
+
+#items .wrapper .col-1-3:first-of-type header, #items .wrapper .col-1-3:nth-of-type(2) header, #items .wrapper .col-1-3:nth-of-type(3) header {
+	background-size: 189px 250px;
 	height: 250px;
 }
 /*--------------------------------------------------------------
@@ -593,9 +664,10 @@ body > footer {
 
 /*--5.2 - Colors ------------------------------------------- */
 
-/*.tint {
-	background-color: rgba(50, 50, 50, 0.6);
-}*/
+/*text color*/
+header a, #items .button:hover, body > header div:nth-of-type(2) .button:hover, #contact .button:hover, body > form > .button:hover {
+	color: black;
+}
 
 /*hero*/
 body > header div:nth-of-type(2) {
@@ -625,6 +697,10 @@ body > footer {
 
 
 @media screen and (max-width: 480px) {
+
+
+/*--Groupings------------------------------------------------ */
+
 .col-1-2.block-center, #intro .col-1-2, blockquote.col-2-3, #items .col-7-12, #items .col-1-2, #items .col-1-6, #items .col-1-3, #items .col-5-12, #location .col-1-2, #location .col-5-12, #location .col-5-6, body > form [class*='col-'], #contact [class*='col-'] {
 	width: 100%;
 }
@@ -634,6 +710,45 @@ body > footer {
 	padding-left: 0;
 }
 /*intro, blockquote, items, items, location, contact */
+
+/*--1.1 - Headings ------------------------------------------- */	
+
+h2 {
+	text-align: center;
+}
+
+/*--1.4 - Forms ------------------------------------------- */	
+
+body > form > label, body > form > input, textarea {
+	display: block;
+	width: 100%;
+	margin: 10px 0;
+}
+
+form {
+	text-align: center;
+}
+
+#contact .col-1-3:nth-child(2) {
+	margin: 0;
+}
+
+#contact textarea {
+	margin: 0 0 8px 0; /*not margin bottom, because I don't want to explicitly change the others to 0;*/
+}
+
+#contact .col-1-3:first-child {
+	display: none;
+}
+
+/*--1.2 - Body Copy ------------------------------------------------- */
+
+/*twinfinch score*/
+
+#items .wrapper > section:first-of-type .col-1-3 p {
+	margin: 100px 0 25px;
+}
+
 /*--3.1 - Column Structure------------------------------------------- */
 
 /*nav bar*/
@@ -693,4 +808,18 @@ footer .col-1-4 {
 body > header > div:first-child {
 	position: static;
 }
+
+/*--------------------------------------------------------------
+5.0 - Utility
+-------------------------------------------------------------- */
+/*--3.2 - Alignment ------------------------------------------- */
+
+#items .row:nth-child(2), #items .col-1-3 > p  {
+	text-align: center;
+}
+
+#items .wrapper .col-1-3:first-child header,#items .wrapper .col-1-3:nth-child(2) header, #items .wrapper .col-1-3:nth-child(3) header {
+	background-position: center;
+}
+
 }
