@@ -139,6 +139,12 @@ blockquote p {
 	line-height: 2.1rem;
 }
 
+/*storefront info*/
+
+.col-5-6.block-center {
+	text-align: center;
+}
+
 /*--1.3 - Buttons ------------------------------------------- */
 
 /*sprites*/
@@ -231,11 +237,16 @@ input {
 	display: block;
 }
 
+input, textarea {
+	color: white;
+	font-size: 1.5rem;
+}
+
 /*subscribe*/
 body > form.wrapper {
 	background-color: #272727;
 	padding: 10px 20px;
-	margin: 30px auto;
+	margin: 0 auto 60px; /*used to be 30*/
 }
 
 body > form label, body > form input, body > form p {
@@ -262,7 +273,7 @@ input, textarea {
 }
 
 textarea {
-	height: 127px;
+	height: 138px;
 	resize: none;
 }
 
@@ -519,7 +530,7 @@ img {
 /*root section*/
 
 body > section {
-	padding: 30px 0;
+	padding: 60px 0; /*changed from 30, needed more spacing to separate sections*/
 }
 
 /*nav*/
