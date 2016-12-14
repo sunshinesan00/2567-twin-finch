@@ -30,11 +30,13 @@
 	<div> <!--top bar-->
     	<div class="wrapper row">
             <div class="col-1-6">
-                <a href="#">
-                    <img src="img/logo.png" alt="" class="logo">
-                </a>
+            	<p class="a-wrapper">
+                    <a href="#">
+                        <img src="img/logo.png" alt="" class="logo">
+                    </a>
+                </p>
             </div>
-            <nav class="col-7-12 float-left" id="smooth-scroll">
+            <nav class="col-7-12 float-left smooth-scroll">
                 <ul>
                 	<li><a href="#intro">About</a></li>
                     <li><a href="#items">Products</a></li>
@@ -45,10 +47,10 @@
     </div>
     
     <div> <!--hero-->
-                <div class="col-1-2 block-center">
+                <div class="col-1-2 block-center smooth-scroll">
                     <h1>Twin Finch Roastery</h1>
                     <p>The most quality coffee in the world from Portland, OR.</p>
-                    <a href="#items" class="button">Check Out Our Selection</a>
+                    <p class="a-wrapper"><a href="#items" class="button">Check Out Our Selection</a></p>
                 </div>
     </div>
     
@@ -70,7 +72,7 @@
         </div>
         <blockquote class="col-2-3 block-center"> <!--blockquote-->
         	<p>“This extraordinary coffee almost defies description with its aromatic complexity while retaining a classic clarity of structure.”</p>
-            <footer><p>- Coffee Review</p></footer>
+            <footer><p><a href="http://www.coffeereview.com/" target="_blank">- Coffee Review</a></p></footer>
         </blockquote>
     </div>
 </section>
@@ -89,17 +91,19 @@
                             <p>Medium</p>
                         </header>
                         <div class="col-1-3">
-                            <p><span>98 </span><br> Rated by coffeereview.com</p>
+                            <p><a href="http://www.coffeereview.com/" target="_blank"><span>98 </span><br> Rated by coffeereview.com</a></p>
                         </div>
                     
                 </div>
                 <div class="row">
                 	<div class="col-1-2">
                         <p>Hint of citrus, complemented by flavors of dark chocolate, peanut and light pepper notes.</p>
-                        <p>La Chiapas, Mexico</p>
+                        <p>Cajamarca & Moyobamba Regions, Peru</p>
                     </div>
                     <div class="col-1-6">
-                    	<a href="#" class="button">Buy Now</a>
+                    	<p class="a-wrapper">
+                        	<a href="#" class="button">Buy Now</a>
+                        </p>
                         <p>1lb $17.95</p>
                     </div>
                 </div>
@@ -119,7 +123,9 @@
                         <p>Eastern Java, Indonesia</p>
                     </div>
                     <div class="col-1-6">
-                    	<a href="#" class="button">Buy Now</a>
+                    	<p class="a-wrapper">
+                    		<a href="#" class="button">Buy Now</a>
+                        </p>
                         <p>1lb $19.95</p>
                     </div>
                 </div>
@@ -147,7 +153,7 @@
                 </section>
                 <section class="col-1-3">
                     <header>
-                    	<h3>Expresso</h3>
+                    	<h3>Espresso</h3>
                         
                     </header>
                     <p>Clean, a little roasty, sumptuous crema, unfussy, delicious.</p>
@@ -161,7 +167,9 @@
                 <div class="col-1-2">
                     <p>Our coffee is roasted in a hot air, refractory lined roaster with an extraordinary level of control.</p>
                     <p>The significance of relying on a high volume of hot air to roast coffee beans can't be understated. Most small coffee roasters use a single stage burner which offers virtually no control during the roasting process. The refractory significantly reduces hot spots which can damage coffee beans and produces a much more even roasting environment.</p>
-                    <a href="http://www.ncausa.org/About-Coffee/How-to-Brew-Coffee" target="_blank">Learn how to brew your own batch here!</a>
+                    <p>
+                    	<a href="http://www.ncausa.org/About-Coffee/How-to-Brew-Coffee" target="_blank">Learn how to brew your own batch here!</a>
+                    </p>
                 </div>
                 <div class="col-5-12">
                 	<figure>
@@ -190,10 +198,14 @@
         </div>
     </div>
 </section>
-<form class="wrapper row"> <!--newsletter sliver-->
+<form> <!--newsletter sliver-->
+	<div class="wrapper">
         <label for="newsletter">Subscribe to our e-Newsletter:</label>
     	<input type="email" name="newsletter" id="newsletter" placeholder="e-mail address">
-    	<a href="#" class="button">Subscribe</a>
+        <p class="a-wrapper">
+    		<a href="#" class="button">Subscribe</a>
+        </p>
+	</div>
 </form>
 <section id="contact"> <!--contact us-->
 	<div class="wrapper">
@@ -215,7 +227,9 @@
             <div class="col-1-3">
             	<label for="comments">Comments</label>
             	<textarea name="comment" placeholder="comment..." id="comments"></textarea>
-                <a href="#" class="button">Submit Now</a>
+                <p class="a-wrapper">
+                	<a href="#" class="button">Submit Now</a>
+                </p>
             </div>
         </form>
     </div>
@@ -223,11 +237,13 @@
 <footer>
 	<div class="wrapper row">
     	<div class="col-1-6">
-        	<a href="#">
-        		<img src="img/logo-white.png" alt="" class="logo">
-            </a>
+        	<p class="a-wrapper">
+                <a href="#">
+                    <img src="img/logo-white.png" alt="" class="logo">
+                </a>
+            </p>
         </div>
-        <nav class="col-5-12"> <!--need to put in anv, check to see if it breaks-->
+        <nav class="col-5-12 smooth-scroll"> <!--need to put in anv, check to see if it breaks-->
         	<ul>
                 	<li><a href="#intro">About</a></li>
                     <li><a href="#items">Products</a></li>
@@ -252,7 +268,7 @@
 jQuery(document).ready(function($){
 	
 	// Smooth scroll home nav
-		$('#smooth-scroll').on('click', 'a', function(e) {
+		$('.smooth-scroll').on('click', 'a', function(e) {
 			// prevent default anchor click behavior
    			e.preventDefault();
 		
