@@ -10,11 +10,9 @@
 	1.3 - Buttons
 	1.4 - Forms
 	1.5 - Lists
-	1.6 - Tables
 2.0 - Navigation Menus
 	2.1 - Main
-	2.2 - Sub
-	2.3 - Footer
+	2.2 - Footer
 3.0 - Content
 	3.1 - Column Structure
 	3.2 - Site Structure
@@ -22,21 +20,10 @@
 	3.4	- Site Footer
 4.0 - Media
 5.0 - Utility
-	5.1 - Text Sizes
-	5.2 - Colors
-	5.3 - Alignments
+	5.1 - Colors
+	5.2 - Alignments
+	
 --------------------------------------------------------------*/
-
-blockquote p, h1, h2, h3 {
-	font-family: 'Cormorant Garamond', serif;
-}
-
-blockquote footer p, .button {
-	font-family: 'Open Sans', sans-serif;
-}
-/*
-font-family: 'Open Sans Condensed', sans-serif;
-*/
 
 *, *:after, *:before {
 	-webkit-box-sizing: border-box;
@@ -50,20 +37,46 @@ html {
 	font-size: 10px;
 }
 
-/*grouping*/
-
 input, textarea, body > header > div:first-child {
 	width: 100%
 }
-/*body > header > div:first-child is the navbar*/
 
 /*--------------------------------------------------------------
 1.0 - Typography
 -------------------------------------------------------------- */
 
+blockquote p, h1, h2, h3 {
+	font-family: 'Cormorant Garamond', serif;
+}
+
+blockquote footer p, .button {
+	font-family: 'Open Sans', sans-serif;
+}
+
 /*bold text grouping*/
 h1, h2, h3, #items .wrapper > section:first-of-type .col-1-3 span, .button, label, body > header div:nth-of-type(2) p, #items > .wrapper > div .col-1-2 p:first-child {
 	font-weight: 700;
+}
+
+/*text color*/
+header a, #items .button:hover, body > header div:nth-of-type(2) .button:hover, #contact .button:hover, body > form .button:hover, blockquote a, #location a {
+	color: black;
+}
+
+input, textarea, label, body > form input, body > header div:nth-of-type(2) {
+	color: white;
+}
+
+input, textarea, nav li, footer .col-5-12 li:hover, .button  {
+	border-color: white;
+}
+
+#contact .button, nav li:hover {
+	border-color: black;
+}
+
+.button, input, textarea, nav li, body > footer .col-5-12 li {
+	border-style: solid;
 }
 
 /*--1.1 - Headings ------------------------------------------- */
@@ -80,6 +93,10 @@ h2 {
 	margin: 5px 0 15px;
 }
 
+#location h2 {
+	margin-bottom: 7px;
+}
+
 h3 {
 	font-size: 2.7rem;
 	margin: 5px 0;
@@ -92,9 +109,19 @@ h3 {
 	text-align: right;
 }
 
+/*center align*/
+
+#items .wrapper > section:first-of-type .col-1-3 p, .col-5-6.block-center, body > header div:nth-of-type(2) {
+	text-align: center;
+}
+
 /*common sizes*/
 #items section header p, blockquote footer p {
 	font-size: 1.7rem;
+}
+
+.button, input, textarea, li, body > header div:nth-of-type(2) p {
+	font-size: 1.5rem;
 }
 
 p {
@@ -132,7 +159,6 @@ blockquote p {
 }
 
 #items .wrapper > section:first-of-type .col-1-3 p {
-	text-align: center;
 	margin: 50px 0 100px;
 }
 
@@ -141,12 +167,6 @@ blockquote p {
 #items > .wrapper > div .col-1-2 p:first-child {
 	font-size: 1.6rem;
 	line-height: 2.1rem;
-}
-
-/*storefront info*/
-
-.col-5-6.block-center {
-	text-align: center;
 }
 
 /*--1.3 - Buttons ------------------------------------------- */
@@ -185,31 +205,18 @@ a {
 	text-decoration: none;
 }
 
-blockquote a {
-	color: black;
-}
-
-blockquote a:hover, #items .wrapper > section:first-of-type .col-1-3 a:hover {
+blockquote a:hover, #items .wrapper > section:first-of-type .col-1-3 a:hover, #location a:hover {
 	color: #666;
 }
 
-#items .wrapper > section:first-of-type .col-1-3 a {
-	color: white;
-}
-
-body > footer a {
+#items .wrapper > section:first-of-type .col-1-3 a, body > footer a, .button {
 	color: white;
 }
 
 .button {
 	display: inline-block;
-	border-style: solid;
 	border-width: 3.5px;
-	border-color: white;
 	padding: 5px 20px;
-	font-size: 1.5rem;
-	color: white;
-	
 }
 
 /*button hero*/
@@ -222,12 +229,6 @@ body > header div:nth-of-type(2) .button {
 #items .button:hover, body > header div:nth-of-type(2) .button:hover, #contact .button:hover, body > form .button:hover {
 	border-color: black;
 	background-color: white;
-}
-
-/*contact button*/
-#contact .button {
-	background-color: #272727;
-	border-color: black;
 }
 
 /*brew article*/
@@ -245,6 +246,7 @@ body > header div:nth-of-type(2) .button {
 }
 
 /*--1.4 - Forms ------------------------------------------- */
+
 label {
 	display: none;
 }
@@ -253,14 +255,8 @@ input {
 	display: block;
 }
 
-input, textarea {
-	color: white;
-	font-size: 1.5rem;
-}
-
 /*subscribe*/
 body > form {
-	background-color: #272727;
 	padding: 60px 0;
 	margin: 30px auto 0; /*used to be 30*/
 }
@@ -270,21 +266,17 @@ body > form label, body > form input, body > form p {
 }
 
 label {
-	color: white;
 	font-size: 1.8rem;
 }
 
 body > form input {
 	width: 40%;
-	color: white;
 }
 
 input, textarea {
 	border-width: 2px;
-	border-style: solid;
 	margin: 8px 0;
 	padding: 10px 5px;
-	border-color: white;
 	background-color: #474747;
 }
 
@@ -298,8 +290,6 @@ form img {
 }
 
 body > form input {
-	
-	background-color: #272727;
 	margin: 0 10px;
 }
 
@@ -333,7 +323,6 @@ ul {
 li {
 	display: inline-block;
 	font-family: 'Open Sans Condensed', sans-serif;
-	font-size: 1.5rem;
 }
 
 footer .col-1-4 ul {
@@ -345,26 +334,13 @@ footer .col-1-4 li {
 }
 
 nav li, body > footer .col-5-12 li {
-	border-style: solid;
 	border-width: 1.5px;
 	padding: 10px 20px;
 	margin: 0 10px;
 }
 
-nav li {
-	border-color: white;
-}
-
 footer .col-5-12 li {
 	border-color: #272727;
-}
-
-nav li:hover {
-	border-color: black;
-}
-
-footer .col-5-12 li:hover {
-	border-color: white;
 }
 
 /*--------------------------------------------------------------
@@ -429,92 +405,12 @@ nav {
 	width: 25%;
 }
 
-.col-3-4 {
-	width: 75%;
-}
-
-.col-1-5 {
-	width: 20%;
-}
-
-.col-2-5 {
-	width: 40%;
-}
-
-.col-3-5 {
-	width: 60%;
-}
-
 .col-1-6 {
 	width: 16.66%;
 }
 
 .col-5-6 {
 	width: 83.33%;
-}
-
-.col-1-7 {
-	width: 14.28%;
-}
-
-.col-2-7 {
-	width: 28.57%;
-}
-
-.col-5-7 {
-	width: 71.42%;
-}
-
-.col-1-8 {
-	width: 12.5%;
-}
-
-.col-3-8 {
-	width: 37.5%;
-}
-
-.col-5-8 {
-	width: 62.5%;
-}
-
-.col-1-9 {
-	width: 11.11%;
-}
-
-.col-2-9 {
-	width: 22.22%;
-}
-
-.col-7-9 {
-	width: 77.77%;
-}
-
-.col-1-10 {
-	width: 10%;
-}
-
-.col-3-10 {
-	width: 30%;
-}
-
-.col-7-10 {
-	width: 70%;
-}
-
-.col-1-11 {
-	width: 9.09%;
-}
-
-.col-2-11 {
-	width: 18.18%;
-}
-
-.col-9-11 {
-	width: 81.81%;
-}
-
-.col-1-12 {
-	width: 8.33%;
 }
 
 .col-5-12 {
@@ -557,12 +453,16 @@ nav.col-7-12.float-left { /*this is an exception, the nav is touching the logo i
 
 /*main card spacing*/
 
-#items .wrapper > section > .row:first-child {
+#items .wrapper > section > div:first-child {
 	padding: 20px 20px 125px;
 }
 
-#items .wrapper > section:first-of-type > .row:first-child {
-	padding: 0 0 0 20px;
+#items .wrapper > section:first-of-type > div:first-child {
+	padding: 20px 20px 0 20px;
+}
+
+#items .wrapper > section > div:nth-of-type(2) {
+	margin-bottom: 30px;
 }
 
 /*how to brew*/
@@ -588,13 +488,6 @@ nav.col-7-12.float-left { /*this is an exception, the nav is touching the logo i
 	height: 250px;
 }
 
-/*lesser items*/
-/*
-#items .wrapper .col-1-3 header p {
-	margin-bottom: 150px;
-	display: inline-block;
-}*/
-
 /*--3.3 - Site Header ------------------------------------------- */
 
 /*hero*/
@@ -610,16 +503,11 @@ body > header div:nth-of-type(2) {
 	-ms-background-size: cover;
 	-o-background-size: cover;
 	background-size: cover;
-	text-align: center;
 	margin: 0;
 }
 
-body > header div:nth-of-type(2) p {
-	font-size: 1.5rem;
-}
-
 #items .wrapper > section > div:first-of-type {
-	margin: 20px 0;
+	margin: 0 0 10px;
 }
 
 /*--3.4 - Site Footer ------------------------------------------- */
@@ -633,14 +521,6 @@ body > footer {
 -------------------------------------------------------------- */
 
 /*background size*/
-/*
-body > header div:nth-of-type(2), #items .wrapper > section:first-of-type > div:first-of-type, #items .wrapper > section:nth-of-type(2) > div:first-of-type {
-	-webkit-background-size: cover;
-	-moz-background-size: cover;
-	-ms-background-size: cover;
-	-o-background-size: cover;
-	background-size: cover;
-}*/
 
 .logo {
 	max-width: 55%;
@@ -689,27 +569,16 @@ body > header div:nth-of-type(2), #items .wrapper > section:first-of-type > div:
 5.0 - Utility
 -------------------------------------------------------------- */
 
-/*--5.2 - Colors ------------------------------------------- */
-
-/*text color*/
-header a, #items .button:hover, body > header div:nth-of-type(2) .button:hover, #contact .button:hover, body > form .button:hover {
-	color: black;
-}
-
-/*hero*/
-body > header div:nth-of-type(2) {
-	color: white;
-}
+/*--5.1 - Colors ------------------------------------------- */
 
 #items, #contact {
 	background-color: #434343; /*dark*/
 	color: white;
 }
 
-body > footer {
+body > footer, #contact .button, body > form, body > form input {
 	background-color: #272727; /*darkest*/
 }
-
 
 /*-----------------------------------------------------------------*/
 
@@ -724,129 +593,118 @@ body > footer {
 
 
 @media screen and (max-width: 480px) {
-
-
-/*--Groupings------------------------------------------------ */
-
-.col-1-2.block-center, #intro .col-1-2, blockquote.col-2-3, #items .col-7-12, #items .col-1-2, #items .col-1-6, #items .col-1-3, #items .col-5-12, #location .col-1-2, #location .col-5-12, #location .col-5-6, body > form [class*='col-'], #contact [class*='col-'] {
-	width: 100%;
-}
-/*hero, intro, intro, items, items, items, items, items, form, contact*/
-
-#intro .col-1-2, blockquote.col-2-3, #items .col-1-3, #items .col-5-12, #location .col-1-2, #location .col-5-12, #location .col-5-6, body > form [class*='col-'], #contact [class*='col-'] {
-	padding-left: 0;
-}
-/*intro, blockquote, items, items, location, contact */
-
-/*--1.1 - Headings ------------------------------------------- */	
-
-h2 {
-	text-align: center;
-}
-
-/*--1.4 - Forms ------------------------------------------- */	
-
-body > form label, body > form input, textarea {
-	display: block;
-	width: 100%;
-	margin: 10px 0;
-}
-
-form {
-	text-align: center;
-}
-
-#contact .col-1-3:nth-child(2) {
-	margin: 0;
-}
-
-#contact textarea {
-	margin: 0 0 8px 0; /*not margin bottom, because I don't want to explicitly change the others to 0;*/
-}
-
-#contact .col-1-3:first-child {
-	display: none;
-}
-
-/*--1.2 - Body Copy ------------------------------------------------- */
-
-/*twinfinch score*/
-
-#items .wrapper > section:first-of-type .col-1-3 p {
-	margin: 100px 0 25px;
-}
-
-/*--3.1 - Column Structure------------------------------------------- */
-
-/*nav bar*/
-.col-1-6 {
-	width: 25%;
-}
-
-nav.col-7-12 {
-	width: 75%;
-}
-/*hero*/
-
-/*intro*/
-#intro .col-5-12 {
-	display: none;
-}
-
-#intro .col-1-2 {
-	margin-bottom: 8px;
-}
-
-/*items*/
-
-#items > .wrapper > section > .row > .col-1-3 {
-	width: 50%;
-}
-
-/*contact*/
-
-#contact h2 {
-	text-align: center;
-}
-
-/*footer*/
-
-footer .col-1-6 {
-	width: 25%;
-}
-
-footer .col-5-12 {
-	width: 75%;
-}
-
-footer .col-1-4 {
-	width: 75%;
-}
-
-
-/*--3.2 - Site Structure------------------------------------------- */
-
-/*column responsive*/
-
-.wrapper {
-	width: 95%;
-}
-
-body > header > div:first-child {
-	position: static;
-}
-
-/*--------------------------------------------------------------
-5.0 - Utility
--------------------------------------------------------------- */
-/*--3.2 - Alignment ------------------------------------------- */
-
-#items .row:nth-child(2), #items .col-1-3 > p  {
-	text-align: center;
-}
-
-#items .wrapper .col-1-3:first-child header,#items .wrapper .col-1-3:nth-child(2) header, #items .wrapper .col-1-3:nth-child(3) header {
-	background-position: center;
-}
+	
+	/*--Groupings------------------------------------------------ */
+	
+	.col-1-2.block-center, #intro .col-1-2, blockquote.col-2-3, #items .col-7-12, #items .col-1-2, #items .col-1-6, #items .col-1-3, #items .col-5-12, #location .col-1-2, #location .col-5-12, #location .col-5-6, body > form [class*='col-'], #contact [class*='col-'] {
+		width: 100%;
+	}
+	
+	#intro .col-1-2, blockquote.col-2-3, #items .col-1-3, #items .col-5-12, #location .col-1-2, #location .col-5-12, #location .col-5-6, body > form [class*='col-'], #contact [class*='col-'] {
+		padding-left: 0;
+	}
+	
+	h2, form, #contact h2, #items .row:nth-child(2), #items .col-1-3 > p   {
+		text-align: center;
+	}
+		
+	/*--1.4 - Forms ------------------------------------------- */	
+	
+	body > form label, body > form input, textarea {
+		display: block;
+		width: 100%;
+		margin: 10px 0;
+	}
+	
+	#contact .col-1-3:nth-child(2) {
+		margin: 0;
+	}
+	
+	#contact textarea {
+		margin: 0 0 8px 0; /*not margin bottom, because I don't want to explicitly change the others to 0;*/
+	}
+	
+	#contact .col-1-3:first-child {
+		display: none;
+	}
+	
+	/*--1.2 - Body Copy ------------------------------------------------- */
+	
+	/*twinfinch score*/
+	
+	#items .wrapper > section:first-of-type .col-1-3 p {
+		margin: 100px 0 25px;
+	}
+	
+	/*--3.1 - Column Structure------------------------------------------- */
+	
+	/*nav bar*/
+	.col-1-6 {
+		width: 25%;
+	}
+	
+	nav.col-7-12 {
+		width: 75%;
+	}
+	/*hero*/
+	
+	/*intro*/
+	#intro .col-5-12 {
+		display: none;
+	}
+	
+	#intro .col-1-2 {
+		margin-bottom: 8px;
+	}
+	
+	/*items*/
+	
+	#items > .wrapper > section > .row > .col-1-3 {
+		width: 50%;
+	}
+	
+	/*footer*/
+	
+	footer .col-1-6 {
+		width: 25%;
+	}
+	
+	footer .col-5-12 {
+		width: 75%;
+	}
+	
+	footer .col-1-4 {
+		width: 75%;
+	}
+	
+	
+	/*--3.2 - Site Structure------------------------------------------- */
+	
+	/*column responsive*/
+	
+	.wrapper {
+		width: 95%;
+	}
+	
+	body > header > div:first-child {
+		position: static;
+	}
+	
+	#items .wrapper > .row .col-1-3, #items .wrapper > section:first-of-type, #items .wrapper > section:nth-of-type(2) {
+		margin-bottom: 105px;
+	}
+	
+	#items .wrapper > .row .col-1-3:last-child {
+		margin-bottom: 0;
+	}
+	
+	/*--------------------------------------------------------------
+	5.0 - Utility
+	-------------------------------------------------------------- */
+	/*--5.2 - Alignment ------------------------------------------- */
+	
+	#items .wrapper .col-1-3:first-child header,#items .wrapper .col-1-3:nth-child(2) header, #items .wrapper .col-1-3:nth-child(3) header {
+		background-position: center;
+	}
 
 }
